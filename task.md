@@ -1,11 +1,11 @@
 Task Laravel:
 
-    [] nel backoffice costruito con laravel caricare dei nuovi progetti
+    [x] nel backoffice costruito con laravel caricare dei nuovi progetti
 
-        []titolo
-        []descrizione
-        []tecnologie
-        []categoria
+        [x]titolo
+        [x]descrizione
+        [x]tecnologie
+        [x]categoria
 
     [] aggiornare l'api perchè possa filtrare anche le categorie
 
