@@ -15,11 +15,13 @@ Task Vue Js:
 
     [] costruire l'architettura della web app
 
-        []header
-        []hero
-        []main
-            [] card
-        []footer
+        []costruire l'app view
+
+            []header
+            []hero
+            []main
+                [] card
+            []footer
 
     [] definire il component main e il component card e relative props
 
