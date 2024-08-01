@@ -13,15 +13,15 @@ Task Laravel:
 
 Task Vue Js:
 
-    [] costruire l'architettura della web app
+    [x] costruire l'architettura della web app
 
-        []costruire l'app view
+        [x]costruire l'app view
 
-            []header
-            []hero
-            []main
+            [x]header
+            [x]hero
+            [x]main
                 [] card
-            []footer
+            [x]footer
 
     [] definire il component main e il component card e relative props
 
