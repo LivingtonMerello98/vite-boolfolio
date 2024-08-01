@@ -2,12 +2,22 @@
 </script>
 
 <template>
-    <div class="container">
-        <p>header</p>
+    <header class="p-3 bg-dark text-white">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                    <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+                        <use xlink:href="#bootstrap"></use>
+                    </svg>
+                </a>
 
-        <a href="/" class="mx-3" style="display: inline-block;">home</a>
-        <a href="/about" style="display: inline-block;">about</a>
-    </div>
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="/" class="nav-link px-2 text-white">Home</a></li>
+                    <li><a href="/about" class="nav-link px-2 text-white">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
 </template>
 
 <style></style>

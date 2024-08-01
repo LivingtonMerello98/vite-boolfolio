@@ -20,8 +20,14 @@ Task Vue Js:
             [x]header
             [x]hero
             [x]main
-                [] card
-            [x]footer
+                [x]
+
+            //creare componente AppCard .1 [x]
+            //importare in AppHome lo store da dove si effettua la chiamata all api [x]
+            //importare in AppHome axios[]
+
+            //verificare che le card funzionino anche senza chiamata Api[x]
+
 
     [] definire il component main e il component card e relative props
 
