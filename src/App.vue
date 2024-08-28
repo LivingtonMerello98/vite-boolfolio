@@ -26,16 +26,20 @@ export default {
       console.log('projects:', response.data);
       this.store.results = response.data.results;
       console.log('la chiamata è stata efettuata con successo')
-    })
+    }).catch(error => {
+      console.error('Errore nella chiamata:', error);
+    });
   }
 }
 
 </script>
 
 <template>
-  <AppHeader />
-  <router-view></router-view>
-  <AppFooter />
+  <section class="bg-dark">
+    <AppHeader />
+    <router-view></router-view>
+    <AppFooter />
+  </section>
 </template>
 
 <style scoped lang="scss"></style>

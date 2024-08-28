@@ -3,6 +3,12 @@ import AppCard from '../components/AppCard.vue'
 
 export default {
     name: 'AppHome',
+    props: {
+        results: {
+            type: Array,
+            required: true,
+        }
+    },
     components: {
         AppCard
     },
@@ -12,7 +18,7 @@ export default {
 <template>
     <div class="container py-5">
         <div class="row">
-            <AppCard />
+            <AppCard :results="results" />
         </div>
     </div>
 </template>

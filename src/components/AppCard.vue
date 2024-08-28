@@ -3,20 +3,26 @@
 
 export default {
     name: 'AppCard',
+    props: {
+        results: {
+            type: Array,
+            required: true,
+        }
+    }
 }
 
 </script>
 
 
 <template>
-    <div class="card" style="width: 18rem;">
+    <div class="card me-3 mt-3" v-for="result in results" :key="result.id" style="width: 18rem;">
         <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-            <!-- <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a> -->
+            <h5 class="card-title">{{ result.title }}</h5>
+            <p class="fw-light">{{ result.description }}</p>
+            <p class="fw-bold">{{ result.category.title }}</p>
+            <ul v-for="technology in result.technologies" :key="technology.id">
+                <li>{{ technology.name }}</li>
+            </ul>
         </div>
     </div>
 </template>
