@@ -1,17 +1,8 @@
 <script>
-
 import { store } from '../store';
 
 export default {
     name: 'AppCard',
-
-    data() {
-
-        return {
-            store
-        }
-
-    },
 
     props: {
         results: {
@@ -19,14 +10,21 @@ export default {
             required: true,
         }
     },
+
+    methods: {
+
+        getImageUrl(cover) {
+            const imageUrl = `${store.url}/${cover}`;
+            console.log(`url dell'immagine: ${imageUrl}`);
+            return imageUrl;
+        }
+    }
 }
-
 </script>
-
 
 <template>
     <div class="card me-3 mt-3" v-for="result in results" :key="result.id" style="width: 18rem;">
-        <img :src="result.cover" class="card-img-top">
+        <img :src="getImageUrl(result.cover)" class="card-img-top">
         <div class="card-body">
             <h5 class="card-title">{{ result.title }}</h5>
             <p class="fw-light">{{ result.description }}</p>
@@ -40,6 +38,3 @@ export default {
         </div>
     </div>
 </template>
-
-
-<style></style>

@@ -13,21 +13,6 @@ export default {
     AppFooter
   },
 
-  data() {
-    return {
-      store
-    }
-  },
-
-  created() {
-    axios.get(this.store.apiUrl).then(response => {
-      console.log('projects:', response.data);
-      this.store.results = response.data.results.data;
-      console.log('la chiamata è stata effettuata con successo');
-    }).catch(error => {
-      console.error('Errore nella chiamata:', error);
-    });
-  }
 }
 
 </script>

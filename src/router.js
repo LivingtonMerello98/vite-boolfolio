@@ -14,13 +14,13 @@ const routes = [
         component: AppHome,
 
         //passiamo i dati come props direttamente alla rotta
-        props: route => ({ results: store.results, count: store.count })
+        //props: route => ({ results: store.results })
     },
     {
         name: 'about',
         path: '/about',
         component: AppAbout,
-        props: route => ({ results: store.results })
+        //props: route => ({ results: store.results })
     },
     {
         name: 'detail',
