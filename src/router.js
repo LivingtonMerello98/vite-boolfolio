@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 
 import AppHome from './pages/AppHome.vue';
 import AppAbout from './pages/AppAbout.vue';
+import AppContacts from './pages/AppContacts.vue';
 import ProjectDetail from './pages/ProjectDetail.vue';
 
 //importiamo lo store dove si trova apiUrl
@@ -20,6 +21,12 @@ const routes = [
         name: 'about',
         path: '/about',
         component: AppAbout,
+        //props: route => ({ results: store.results })
+    },
+    {
+        name: 'contacts',
+        path: '/contacts',
+        component: AppContacts,
         //props: route => ({ results: store.results })
     },
     {
