@@ -19,7 +19,7 @@ export default {
 
 <template>
   <section class="bg-dark">
-    <AppHeader />
+    <!-- <AppHeader /> -->
     <router-view></router-view>
     <AppFooter />
   </section>

@@ -8,3 +8,35 @@
 
 
 @import "bootstrap/scss/bootstrap";
+
+
+@import "@fontsource/archivo-black";
+/* Per i titoli e sottotitoli */
+
+@import "@fontsource/inter/400.css";
+/* Peso normale */
+@import "@fontsource/inter/600.css";
+/* Semi-bold */
+@import "@fontsource/inter/700.css";
+/* Bold */
+/* Per i paragrafi */
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Archivo Black', sans-serif;
+}
+
+p {
+    line-height: 1.5;
+}

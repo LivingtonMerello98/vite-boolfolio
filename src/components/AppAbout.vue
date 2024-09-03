@@ -1,13 +1,20 @@
 <script>
+// About component
+
 
 export default {
-    name: 'AppAbout'
+    name: 'AppAbout',
+
+    components: {
+
+    }
 }
 
 
 </script>
 
 <template>
+    <AppHeader />
     <div class="container">
         <div class="row">
             <div class="col-md-12 py-3">

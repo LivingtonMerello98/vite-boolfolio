@@ -9,6 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource/archivo-black": "^5.0.21",
+    "@fontsource/inter": "^5.0.20",
+    "@fontsource/work-sans": "^5.0.19",
     "axios": "^1.7.2",
     "bootstrap": "^5.3.3",
     "vue": "^3.4.31",
