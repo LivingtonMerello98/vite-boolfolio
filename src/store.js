@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { reactive } from 'vue';
 
+/*
 export const store = reactive({
     current_page: 1,
     results: [],
@@ -61,3 +62,4 @@ export const store = reactive({
     }
 
 })
+*/

@@ -1,5 +1,5 @@
 <script>
-import { store } from './store';
+// import { store } from './store';
 import axios from 'axios';
 
 
@@ -18,7 +18,7 @@ export default {
 </script>
 
 <template>
-  <section class="bg-dark">
+  <section>
     <!-- <AppHeader /> -->
     <router-view></router-view>
     <AppFooter />

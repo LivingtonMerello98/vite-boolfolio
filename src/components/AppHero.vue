@@ -1,5 +1,4 @@
 <script>
-
 import AppHeaderHero from './AppHeaderHero.vue';
 
 export default {
@@ -10,96 +9,87 @@ export default {
     data() {
         return {
             name: 'AppHero',
-            stringAnimated: [
-                ' Web-Desinger',
-                'Full-stack Developer'
-            ],
-            currentString: '',
-            currentIndex: 0
-        }
+            isLoaded: false, // Stato per attivare l'animazione
+        };
     },
 
-    methods: {
-        animateText() {
-            // Cambia il testo ogni 3 secondi
-            setInterval(() => {
-                this.currentString = this.stringAnimated[this.currentIndex];
-                this.currentIndex = (this.currentIndex + 1) % this.stringAnimated.length;
-            }, 3000);
-        }
+    mounted() {
+        // Ritarda l'attivazione per assicurarsi che la pagina sia pronta
+        setTimeout(() => {
+            this.isLoaded = true;
+        }, 300); // Ritardo di 300ms
     },
-    created() {
-        this.animateText();
-    }
-
-}
+};
 </script>
 
 <template>
     <section class="section">
         <AppHeaderHero />
-        <video class="background " autoplay muted loop>
-            <source src="https://videos.pexels.com/video-files/6071387/6071387-uhd_2560_1440_30fps.mp4" type="video/mp4">
-        </video>
-        <div class="container jumbotron">
+        <div class="container jumbotron text-start d-flex">
             <div class="row">
-                <div class="col-md-12 text-center mb-3">
-                    <p class="text-light fs-3 d-inline">Ciao sono Livington e sono un<br><span
-                            class="text-light fw-bolder fs-2 d-inline archivo-black">{{ currentString }}</span>
-                    </p>
+                <div 
+                    class="col-lg-6 col-md-12 col-sm-12 py-3 d-flex align-items-center" 
+                    :class="{ 'fade-in': isLoaded }"
+                >
+                    <div>
+                        <h3 class="text-white text-uppercase mb-3">
+                            Hi! my name is Livington
+                        </h3>
+                        <h1 class="text-white text-uppercase">
+                            Jr.Frontend Developer and UX/UI Designer
+                        </h1>
+                    </div>
                 </div>
-                <div class="col-md-12 text-center">
-                    <button class="btn btn-danger">
-                        Esplora i progetti
-                    </button>
+                <div 
+                    class="col-lg-6 col-md-12 col-sm-12 py-3 d-flex justify-content-center" 
+                    :class="{ 'fade-in': isLoaded }"
+                >
+                    <img src="/rocket.webp" alt="" style="width: 400px; height: auto;">
                 </div>
             </div>
         </div>
+        <div class="border-top border-bottom border-white py-4 carousel"></div>
     </section>
 </template>
+
 
 <style lang="scss" scoped>
 .section {
     position: relative;
-    height: 80vh;
-
-    .background {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: 1;
-    }
-
-    .background::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(0, 0, 0));
-        /* Da nero semi-trasparente a trasparente */
-        z-index: 3;
-        /* Sopra l'immagine ma sotto il contenuto */
-    }
+    background-image: url('hero-background-dsk.png');
+    background-size: cover;
+    min-height: 105vh; 
 
     .jumbotron {
         position: absolute;
-        top: 40%;
+        top: 20%;
         left: 0;
         right: 0;
         z-index: 3;
+        height: auto;
     }
 
-    .d-inline {
-        display: inline;
+    .carousel {
+        position: absolute;
+        bottom: 30px; 
+        left: 0;
+        width: 100%; 
+        z-index: 2; 
     }
+}
 
-    .archivo-black {
-        font-family: 'Archivo Black', sans-serif;
-    }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Effetto scorrimento */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1.5s ease-out forwards;
 }
 </style>

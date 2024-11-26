@@ -6,7 +6,7 @@ import AppAbout from '../components/AppAbout.vue';
 import AppService from '../components/AppService.vue';
 
 //importiamo axios e store
-import { store } from '../store';
+// import { store } from '../store';
 
 export default {
     name: 'home',
@@ -20,12 +20,11 @@ export default {
 
     data() {
         return {
-            store,
+        
         }
     },
 
     created() {
-        this.store.getProjects()
     }
 }
 </script>
@@ -36,14 +35,14 @@ export default {
     <AppService />
     <div class="container py-5">
         <div class="row justify-content-center">
-            <AppCard :results="this.store.results" />
+            <AppCard/>
             <div class="col-md-12 d-flex justify-content-between mt-3">
 
-                <button class="btn bg-primary" @click="this.store.prevPage()">
+                <button class="btn bg-primary">
                     <span class="fw-light text-light">prev</span>
                 </button>
 
-                <button class="btn bg-primary" @click="this.store.nextPage()">
+                <button class="btn bg-primary" >
                     <span class="fw-light text-light">next</span>
                 </button>
 

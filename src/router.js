@@ -6,7 +6,7 @@ import AppContacts from './pages/AppContacts.vue';
 import ProjectDetail from './pages/ProjectDetail.vue';
 
 //importiamo lo store dove si trova apiUrl
-import { store } from './store';
+// import { store } from './store';
 
 const routes = [
     {
