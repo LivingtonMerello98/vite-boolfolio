@@ -1,98 +1,152 @@
 <script>
+//componente da revisionare
+  import { Swiper, SwiperSlide } from 'swiper/vue';
+  import 'swiper/css';
+  import 'swiper/css/navigation';
 
-export default {
-    data() {
-        return {
-            name: 'AppService',
-            services: [
-                {
-                    id: 1,
-                    icon: 'code',
-                    title: 'Sviluppo Web',
-                    description: 'Creiamo siti web su misura con le ultime tecnologie e pratiche.'
-                },
-                {
-                    id: 2,
-                    icon: 'paint-brush',
-                    title: 'Design Grafico',
-                    description: 'Progettiamo grafiche accattivanti e professionali per la tua brand identity.'
-                },
-                {
-                    id: 3,
-                    icon: 'rocket',
-                    title: 'Innovazione',
-                    description: 'Offriamo soluzioni innovative per aiutare il tuo business a crescere.'
-                },
-                {
-                    id: 4,
-                    icon: 'handshake',
-                    title: 'Collaborazione',
-                    description: 'Lavoriamo a stretto contatto con te per realizzare i tuoi obiettivi.'
-                }
-            ]
-        }
-    }
-}
+  export default {
+    components: {
+      Swiper,
+      SwiperSlide,
+    },
+    setup() {
+      // Dati dinamici per le card
+      const cards = [
+        {
+          id: 1,
+          image: 'https://via.placeholder.com/300x200',
+          title: 'Card Title 1',
+          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+          buttonText: 'Learn More',
+          buttonLink: '#',
+        },
+        {
+          id: 2,
+          image: 'https://via.placeholder.com/300x200',
+          title: 'Card Title 2',
+          description: 'Integer nec odio. Praesent libero. Sed cursus ante dapibus.',
+          buttonText: 'View Details',
+          buttonLink: '#',
+        },
+        {
+          id: 3,
+          image: 'https://via.placeholder.com/300x200',
+          title: 'Card Title 3',
+          description: 'Fusce nec tellus sed augue semper porta. Mauris massa.',
+          buttonText: 'Contact Us',
+          buttonLink: '#',
+        },
+      ];
 
+      const onSwiper = (swiper) => {
+        console.log(swiper);
+      };
 
+      const onSlideChange = () => {
+        console.log('slide change');
+      };
+
+      return {
+        cards,
+        onSwiper,
+        onSlideChange,
+      };
+    },
+  };
 </script>
 
 <template>
-    <div class="container py-5">
-        <!-- Sezione dei servizi -->
-        <div class="row mb-4">
-            <div class="col-md-12 text-center py-3">
-                <h3 class="fw-bold text-light">Io sono il componente dedicato ai servizi</h3>
-                <p class="fw-light text-light">Qui filtreremo delle categorie e le formatteremo in delle card</p>
-            </div>
+  <section class="bg-image">
+    <Swiper
+      @swiper="onSwiper"
+      @slideChange="onSlideChange"
+      :slides-per-view="1"
+      :space-between="10"
+      loop
+      navigation
+    >
+      <!-- Genera dinamicamente le card -->
+      <SwiperSlide v-for="card in cards" :key="card.id">
+        <div class="card">
+          <img :src="card.image" :alt="card.title" />
+          <h3>{{ card.title }}</h3>
+          <p>{{ card.description }}</p>
+          <a :href="card.buttonLink" class="btn">{{ card.buttonText }}</a>
         </div>
-
-        <!-- Box dei servizi -->
-        <div class="row text-center mb-3">
-            <div class="col-md-6 mb-4" v-for="service in services" :key="service.id">
-                <div class="service-box">
-                    <font-awesome-icon :icon="service.icon" class="service-icon" />
-                    <h5 class="service-title">{{ service.title }}</h5>
-                    <p class="service-description">{{ service.description }}</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-12 text-center">
-            <button class="btn text-bg-primary">Go to somewhere</button>
-        </div>
-    </div>
+      </SwiperSlide>
+    </Swiper>
+  </section>
 </template>
 
-
-<style scoped>
-.service-box {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    background-color: #f8f9fa;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-    text-align: center;
+<style lang="scss" scoped>
+/* Sfondo della sezione */
+.bg-image {
+  background-image: url('../graphics/hero-background-dsk.png');
+  background-size: cover;
+  background-position: center;
+  padding: 20px 0;
 }
 
-.service-box:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transform: translateY(-5px);
+/* Stile della card */
+.card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  max-width: 300px;
+  margin: 0 auto;
 }
 
-.service-icon {
-    font-size: 3rem;
-    color: #007bff;
-    margin-bottom: 10px;
+/* Immagine nella card */
+.card img {
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 10px;
 }
 
-.service-title {
-    font-size: 1.25rem;
-    font-weight: bold;
-    margin-bottom: 10px;
+/* Titolo della card */
+.card h3 {
+  margin: 10px 0;
+  font-size: 1.5em;
+  color: #333;
 }
 
-.service-description {
-    font-size: 1rem;
-    color: #6c757d;
+/* Testo nella card */
+.card p {
+  color: #666;
+  margin: 0 0 20px;
+  font-size: 1em;
+}
+
+/* Pulsante nella card */
+.card .btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.card .btn:hover {
+  background-color: #0056b3;
+}
+
+/* Stile per i pulsanti di navigazione di Swiper */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 </style>

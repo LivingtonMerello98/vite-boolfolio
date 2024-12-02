@@ -44,10 +44,11 @@ export default {
                     class="col-lg-6 col-md-12 col-sm-12 py-3 d-flex justify-content-center" 
                     :class="{ 'fade-in': isLoaded }"
                 >
-                    <img src="/rocket.webp" alt="" style="width: 400px; height: auto;">
+                    <img src="../graphics/rocket.webp" alt="" style="width: 400px; height: auto;">
                 </div>
             </div>
         </div>
+        
         <div class="border-top border-bottom border-white py-4 carousel"></div>
     </section>
 </template>
@@ -56,7 +57,7 @@ export default {
 <style lang="scss" scoped>
 .section {
     position: relative;
-    background-image: url('hero-background-dsk.png');
+    background-image: url('../graphics/hero-background-dsk.png');
     background-size: cover;
     min-height: 105vh; 
 

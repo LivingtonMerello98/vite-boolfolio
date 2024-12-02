@@ -17,14 +17,14 @@ export default {
 <template>
     <div class="container py-5">
         <div class="row">
-            <div class="div-col-12 text-center py-5">
+            <!-- <div class="div-col-12 text-center py-5 mb-5">
                 <h3 class="text-uppercase">chi sono...?</h3>
-            </div>
+            </div> -->
             <!-- Immagine a sinistra -->
             <div class="col-md-6 py-5 d-flex justify-content-end align-items-center">
                 <div class="img-container">
-                    <img src="/public/astronaut.webp" alt="robot-developer" class="robot" />
-                    <img src="/public/planet.png" alt="" class="planet" />
+                    <img src="../graphics/astronaut.webp" alt="robot-developer" class="robot" />
+                    <img src="../graphics/planet.png" alt="planet" class="planet" />
                 </div>
             </div>
             <!-- Card Vitrea -->
@@ -52,7 +52,7 @@ export default {
                     </div>
                     <div class="button-container">
                         <button class="btn btn-primary">
-                            clicca qui
+                            esplora i progetti
                         </button>
                     </div>
                 </div>
@@ -95,7 +95,7 @@ export default {
         transform: translateY(0); // Posizione iniziale e finale
     }
     50% {
-        transform: translateY(-20px); // Movimento verso l'alto
+        transform: translateY(-40px); // Movimento verso l'alto
     }
 }
 
@@ -105,7 +105,7 @@ export default {
 }
 
 .glass-card {
-    background-image: url('/public/hero-background-dsk.png');
+    background-image: url('../graphics/hero-background-dsk.png');
     background-size: cover;
     color: white;
     border-radius: 15px;
