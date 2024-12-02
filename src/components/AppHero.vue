@@ -1,9 +1,11 @@
 <script>
 import AppHeaderHero from './AppHeaderHero.vue';
+import CarouselContainer from './CarouselContainer.vue';
 
 export default {
     components: {
         AppHeaderHero,
+        CarouselContainer
     },
 
     data() {
@@ -48,8 +50,8 @@ export default {
                 </div>
             </div>
         </div>
-        
-        <div class="border-top border-bottom border-white py-4 carousel"></div>
+        <!--da sostituire con un componente carosello-->
+        <CarouselContainer class="carousel"/>
     </section>
 </template>
 
@@ -72,7 +74,7 @@ export default {
 
     .carousel {
         position: absolute;
-        bottom: 30px; 
+        bottom: 20px; 
         left: 0;
         width: 100%; 
         z-index: 2; 
