@@ -13,7 +13,7 @@ export default{
             </div>
             <div class="col-12 d-flex justify-content-center">
                 <div class="img-container">
-                    <img src="../graphics/devices.svg" class="devices">
+                    <img src="../graphics/deliveboo.png" class="devices">
                 </div>
             </div>
         </div>
