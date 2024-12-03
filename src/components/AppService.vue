@@ -30,22 +30,16 @@ import ProjectsGallery from './ProjectsGallery.vue';
             link:'https://prolocoisolacaporizzuto.it/',
           },
           {
-            name:'Website 4',
-            image:'../graphics/nike.webp',
+            name:'Quickwind',
+            image:'/covers/quickwind-cover.png',
             description:'Lorem Ipsum Dolor Sit Amet Consectetur. Gravida Dolor Tristique Sit Donec Tempor Ac Nunc Fermentum Lectus.',
-            link:'',
+            link:'https://quickwind-web.netlify.app/',
           },
           {
-            name:'Website 5',
-            image:'../graphics/nike.webp',
+            name:'Boolzapp',
+            image:'/covers/boolzapp-cover.png',
             description:'Lorem Ipsum Dolor Sit Amet Consectetur. Gravida Dolor Tristique Sit Donec Tempor Ac Nunc Fermentum Lectus.',
-            link:'',
-          },
-          {
-            name:'Website 6',
-            image:'../graphics/nike.webp',
-            description:'Lorem Ipsum Dolor Sit Amet Consectetur. Gravida Dolor Tristique Sit Donec Tempor Ac Nunc Fermentum Lectus.',
-            link:'',
+            link:'https://boolzapp-message-hub.netlify.app/',
           }
         ]
       }
@@ -62,13 +56,11 @@ import ProjectsGallery from './ProjectsGallery.vue';
       <div class="row">
         <!-- Titolo -->
         <div class="col-12">
-          <h3 class="text-white text-uppercase mb-5">
-            Project ShowCase
+          <h3 class="text-white  mb-3">
+            Projects Showcase
           </h3>
           <p class="text-white">
-            lorem ipsum ipsum dolor lorem ipsum ipsum dolor lorem ipsum ipsum dolor <br>
-            lorem ipsum ipsum dolor lorem ipsum ipsum dolor <br>
-            lorem ipsum ipsum dolor
+            The projects I showcase reflect a continuous learning journey,<br> experimenting with new technologies and integrating APIs to <br>enhance the solutions provided.
           </p>
 
           <!-- <img src="/languages/html.svg" alt="" style="width: 300px; height: 300px;"> -->

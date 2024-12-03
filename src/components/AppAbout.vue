@@ -39,8 +39,8 @@ export default {
                 
                 <div class="col-md-12 content">
                     <div class="mb-5">
-                        <h3 class="mb-3">Lorem ipsum dolor sit amet <br> consectetur! </h3>
-                        <p>lorem ipsum ipsum dolor lorem ipsum ipsum dolor lorem ipsum ipsum dolor</p>
+                        <h3 class="mb-3">In continuous learning and development of new technologies</h3>
+                        <p>I have always strived to give my best in every field I embrace, aiming to achieve a high level of professional competence</p>
                     </div>
 
                     <!--card-->
