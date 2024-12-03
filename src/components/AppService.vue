@@ -7,10 +7,15 @@ import ProjectsGallery from './ProjectsGallery.vue';
       return{
         projects:[
           {
-            name:'Website 1',
-            image:'../graphics/nike.webp',
-            description:'Lorem Ipsum Dolor Sit Amet Consectetur. Gravida Dolor Tristique Sit Donec Tempor Ac Nunc Fermentum Lectus.',
+            name:'Skysense ',
+            image:'/covers/weather-cover.png',
+            description:'Nel video puoi vedere SkySense in funzione, con il suo design intuitivo e responsivo. Dalla visualizzazione delle condizioni meteo in tempo reale alla gestione delle città preferite, ogni dettaglio è pensato per rendere l esperienza semplice e veloce.',
             link:'',
+            languages:[
+              'vue.js',
+              'scss',
+              'tailwind.css'
+            ]
           },
           {
             name:'Website 2',
@@ -65,6 +70,8 @@ import ProjectsGallery from './ProjectsGallery.vue';
             lorem ipsum ipsum dolor lorem ipsum ipsum dolor <br>
             lorem ipsum ipsum dolor
           </p>
+
+          <!-- <img src="/languages/html.svg" alt="" style="width: 300px; height: 300px;"> -->
         </div>
       </div>
     </div>

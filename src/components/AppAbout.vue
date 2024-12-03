@@ -4,9 +4,21 @@ export default {
     data() {
         return {
             courses: [
-                { name: 'Boolean', year: '2024', certificate:'Fullstack Development'},
-                { name: 'Learn', year: '2023', certificate: 'UX Design' },
-                { name: 'Learn', year: '2023', certificate: 'Webflow/Web-Design' },
+                { 
+                name: 'Boolean', 
+                year: '2024', 
+                certificate:'Fullstack Development'
+                },
+                { 
+                name: 'Learn', 
+                year: '2023', 
+                certificate: 'UX Design' 
+                },
+                { 
+                name: 'Learn', 
+                year: '2023', 
+                certificate: 'Webflow/Web-Design' 
+                },
             ],
         };
     },
@@ -47,7 +59,7 @@ export default {
                     </div>
 
                     <div class="col-12 mt-5 d-flex justify-content-end">
-                        <button class="button py-1 mx-3">
+                        <button class="button py-2 mx-3">
                             linkedin
                         </button>
                     </div>
@@ -122,6 +134,10 @@ export default {
     border-bottom-left-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
     background-color: white;
+}
+// forse da rimuovere
+.button:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 </style>
 
