@@ -30,6 +30,9 @@ export default {
       this.isDragging = false; // Arresta il trascinamento
     },
   },
+  mounted(){
+    console.log(this.projects[0].link[0])
+  }
 };
 </script>
   
@@ -44,37 +47,33 @@ export default {
         @mouseup="stopDrag"
         @mouseleave="stopDrag"
         >
-        <!-- Card singole -->
-        <div
-            v-for="(project, index) in projects"
-            :key="index"
-            class="card-container mx-3"
-        >
-           <a :href="project.link" target="_blank">
+           <!-- Card singole -->
+          <div
+              v-for="(project, index) in projects"
+              :key="index"
+              class="card-container mx-3"
+          >
+              <a :href="project.link" target="_blank">
 
-              <!-- Immagine di sfondo -->
-              <div class="background-image"
-              :style="{ backgroundImage: `url(${project.image})` }"></div>
+                  <!-- Immagine di sfondo -->
+                  <div class="background-image"
+                  :style="{ backgroundImage: `url(${project.image})` }"></div>
 
-              <!-- Top Bar -->
-              <div class="top-bar my-3">
-                <span class="box px-3 py-1" style="z-index: 3;">{{ project.name }}</span>
-                <button class="expand-button px-2 py-1">
-                    <i class="icon">⤢</i>
-                </button>
-              </div>
+                  <!-- Top Bar -->
+                  <div class="top-bar my-3">
+                    <span class="box px-3 py-1" style="z-index: 3;">{{ project.name }}</span>
+                    <button class="expand-button px-2 py-1">
+                        <i class="icon">⤢</i>
+                    </button>
+                  </div>
+                  <div class="bottom-bar d-flex justify-content-center py-3">
+                    <img :src="language" 
+                    class="language-icon mx-3"  
+                    v-for="(language,index) in project.languages" :key="index" >
+                  </div>
+              </a>
 
-              <!-- Content Section -->
-              <div class="content py-5 mt-5">
-                <!-- <h2 class="title text-uppercase mb-3">{{ project.name }}</h2> -->
-                <!-- <p class="description">
-                    {{project.description}}
-                </p> -->
-              </div>
-
-           </a>
-
-        </div>
+          </div>
         </div>
     </div>
 </template>
@@ -122,6 +121,20 @@ export default {
   padding: 10px 15px;
   font-size: 14px;
   color: #FFFFFF;
+  z-index: 3; /* Sopra l'immagine */
+}
+
+.language-icon{
+  width: 30px; 
+  height: 30px; 
+  filter: invert(14%) sepia(21%) saturate(1500%) hue-rotate(220deg) brightness(91%) contrast(89%);
+}
+
+.bottom-bar {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
   z-index: 3; /* Sopra l'immagine */
 }
 
