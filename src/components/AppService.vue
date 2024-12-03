@@ -10,7 +10,7 @@ import ProjectsGallery from './ProjectsGallery.vue';
             name:'Skysense ',
             image:'/covers/weather-cover.png',
             description:'Nel video puoi vedere SkySense in funzione, con il suo design intuitivo e responsivo. Dalla visualizzazione delle condizioni meteo in tempo reale alla gestione delle città preferite, ogni dettaglio è pensato per rendere l esperienza semplice e veloce.',
-            link:'',
+            link:'https://skysense.netlify.app/',
             languages:[
               'vue.js',
               'scss',
@@ -18,13 +18,13 @@ import ProjectsGallery from './ProjectsGallery.vue';
             ]
           },
           {
-            name:'Website 2',
-            image:'../graphics/nike.webp',
+            name:'Clarity',
+            image:'/covers/clarity-cover.png',
             description:'Lorem Ipsum Dolor Sit Amet Consectetur. Gravida Dolor Tristique Sit Donec Tempor Ac Nunc Fermentum Lectus.',
-            link:'',
+            link:'https://clarity-task-hub.netlify.app/',
           },
           {
-            name:'Website 3',
+            name:'Quickwind',
             image:'../graphics/nike.webp',
             description:'Lorem Ipsum Dolor Sit Amet Consectetur. Gravida Dolor Tristique Sit Donec Tempor Ac Nunc Fermentum Lectus.',
             link:'',

@@ -50,25 +50,29 @@ export default {
             :key="index"
             class="card-container mx-3"
         >
-            <!-- Immagine di sfondo -->
-            <div class="background-image"
-            :style="{ backgroundImage: `url(${project.image})` }"></div>
+           <a :href="project.link" target="_blank">
 
-            <!-- Top Bar -->
-            <div class="top-bar my-3">
-              <span class="box px-3 py-1" style="z-index: 3;">lorem ipsum + views</span>
-              <button class="expand-button px-2 py-1">
-                  <i class="icon">⤢</i>
-              </button>
-            </div>
+              <!-- Immagine di sfondo -->
+              <div class="background-image"
+              :style="{ backgroundImage: `url(${project.image})` }"></div>
 
-            <!-- Content Section -->
-            <div class="content py-5 mt-5">
-              <!-- <h2 class="title text-uppercase mb-3">{{ project.name }}</h2> -->
-              <!-- <p class="description">
-                  {{project.description}}
-              </p> -->
-            </div>
+              <!-- Top Bar -->
+              <div class="top-bar my-3">
+                <span class="box px-3 py-1" style="z-index: 3;">{{ project.name }}</span>
+                <button class="expand-button px-2 py-1">
+                    <i class="icon">⤢</i>
+                </button>
+              </div>
+
+              <!-- Content Section -->
+              <div class="content py-5 mt-5">
+                <!-- <h2 class="title text-uppercase mb-3">{{ project.name }}</h2> -->
+                <!-- <p class="description">
+                    {{project.description}}
+                </p> -->
+              </div>
+
+           </a>
 
         </div>
         </div>
@@ -107,7 +111,7 @@ export default {
   background-size: cover;
   background-position: center;
   z-index: 0; /* Dietro al contenuto */
-  opacity: 0.8;  /*Trasparenza dell'immagine */
+  opacity: 0.9;  /*Trasparenza dell'immagine */
 }
 
 
