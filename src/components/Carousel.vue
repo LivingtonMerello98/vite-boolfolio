@@ -52,7 +52,7 @@ export default {
       container.style.height = `${sliderHeight}px`;
 
       // Velocità di animazione (più immagini ci sono, più tempo serve)
-      this.speed = this.images.length * 4;
+      this.speed = this.images.length * 3;
 
       // Avviare l'animazione con CSS
       this.startAnimation();
@@ -81,7 +81,7 @@ export default {
 </script>
 
 <template>
-  <div class="block">
+  <div class="block py-5">
     <div class="animation" ref="animationContainer">
       <div v-for="(image, index) in images" :key="index" class="slide">
         <img :src="image" />
@@ -109,7 +109,7 @@ export default {
 
 img {
   width: auto;
-  height: 80px;
-  margin-inline: 1rem;
+  height: 50px;
+  margin-inline: 2rem;
 }
 </style>

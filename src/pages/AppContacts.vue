@@ -1,19 +1,10 @@
 <script>
-import AppHeader from '../components/AppHeader.vue'
-
-export default {
-    name: 'AppContact',
-
-    components: {
-        AppHeader
-    }
-}
 
 
 </script>
 
 <template>
-    <AppHeader />
+    
     <div class="container">
         <div class="container">
             <div class="row">

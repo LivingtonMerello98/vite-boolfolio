@@ -3,11 +3,10 @@ export default {
     name: 'AppAbout',
     data() {
         return {
-            skills: [
-                { name: 'Vue', progress: 80 },
-                { name: 'React', progress: 70 },
-                { name: 'Tailwind.css', progress: 90 },
-                { name: 'Bootstrap', progress: 95 },
+            courses: [
+                { name: 'Boolean', year: '2024', certificate:'Fullstack Development'},
+                { name: 'Learn', year: '2023', certificate: 'UX Design' },
+                { name: 'Learn', year: '2023', certificate: 'Webflow/Web-Design' },
             ],
         };
     },
@@ -17,46 +16,39 @@ export default {
 <template>
     <div class="container py-5">
         <div class="row">
-            <!-- <div class="div-col-12 text-center py-5 mb-5">
-                <h3 class="text-uppercase">chi sono...?</h3>
-            </div> -->
             <!-- Immagine a sinistra -->
-            <div class="col-md-6 py-5 d-flex justify-content-end align-items-center">
+            <div class="col-md-4 py-5 d-flex align-items-center justify-content-end">
                 <div class="img-container">
-                    <img src="../graphics/astronaut.webp" alt="robot-developer" class="robot" />
-                    <img src="../graphics/planet.png" alt="planet" class="planet" />
+                    <img src="../graphics/rocket.webp" alt="robot-developer" class="rocket" />
                 </div>
             </div>
-            <!-- Card Vitrea -->
-            <div class="col-md-6 py-5 d-flex align-items-center">
-                <div class="glass-card p-5">
-                    <h5 class="font-weight-bold presentation mb-3">
-                        Ciao! Io non sono un robot in realtà...<br />
-                        ma questo è il mio Avatar e ti accompagnerà in tutto il sito.
-                    </h5>
-                    <p class="mb-5">
-                        Ma prima mi presento! Sono un jr.Frontend developer,<br />
-                        appassionato di programmazione <br> e attento al design UX/UI.
-                    </p>
-                    <!-- Griglia delle competenze -->
-                    <div class="skills-grid mt-4 mb-4">
-                        <div v-for="(skill, index) in skills" :key="index" class="skill-card">
-                            <span class="skill-name">{{ skill.name }}</span>
-                            <div class="progress-bar">
-                                <div
-                                    class="progress-fill"
-                                    :style="{ width: skill.progress + '%' }"
-                                ></div>
-                            </div>
+
+            <div class="col-md-8 d-flex align-items-center py-3">
+                
+                <div class="col-md-12 content">
+                    <h3>Lorem ipsum dolor sit amet <br> consectetur! </h3>
+                    <p class="mb-3">lorem ipsum ipsum dolor lorem ipsum ipsum dolor lorem ipsum ipsum dolor</p>
+
+                    <!--card-->
+                    <div class="col-md-12 py-1 my-3 custom-card d-flex justify-content-center align-items-center px-3" v-for="(course,index) in courses" :key="index">
+
+                        <div class="col-3 text-center py-2">
+                            <span>{{course.name}}</span>
                         </div>
+                        <div class="col-2 text-center py-2">
+                            <span>{{course.year}}</span>
+                        </div>
+                        <div class="col-7 text-center py-2">
+                            <span>{{ course.certificate }}</span>
+                        </div>
+
                     </div>
-                    <div class="button-container">
-                        <button class="btn btn-primary">
-                            esplora i progetti
-                        </button>
-                    </div>
+
+
                 </div>
+
             </div>
+
         </div>
     </div>
 </template>
@@ -65,130 +57,56 @@ export default {
 <style lang="scss" scoped>
 .img-container {
     position: relative;
-    width: 400px;
+    width: 500px;
     height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
 
-    .robot {
+    .rocket {
         display: block;
         width: 100%;
         height: auto;
         object-fit: cover;
-        z-index: 2;
-        animation: float 3s ease-in-out infinite; // Animazione infinita
-    }
-
-    .planet {
-        position: absolute;
-        width: 200px;
-        height: auto;
-        left: 0px;
-        bottom: 0px;
     }
 }
 
-// Definizione dell'animazione
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0); // Posizione iniziale e finale
-    }
-    50% {
-        transform: translateY(-40px); // Movimento verso l'alto
-    }
+.custom-card {
+  display: flex; /* Imposta Flexbox */
+  justify-content: center; /* Allinea orizzontalmente i figli */
+  align-items: center; /* Allinea verticalmente al centro */
+  border: 1px solid #151D4C;
+  border-radius: 1.5rem;
+  transition: all 0.3s ease; /* Animazione fluida per l'hover */
+  background-color: transparent; /* Sfondo di default */
 }
 
-.presentation {
-    font-weight: 600;
-    line-height: 1.5rem;
+.custom-card span {
+  color: #151D4C; /* Colore del testo di default */
+  font-weight: normal; /* Peso del testo di default */
+  transition: color 0.3s ease, font-weight 0.3s ease; /* Transizione su colore e peso */
 }
 
-.glass-card {
-    background-image: url('../graphics/hero-background-dsk.png');
-    background-size: cover;
-    color: white;
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    padding: 20px;
-    max-width: 100%;
-    position: relative; // Importante per posizionare il riflesso
-    overflow: hidden; // Nasconde gli elementi fuori dai bordi
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-
-    &:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    // Effetto riflesso
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: -150%; // Partenza fuori dai bordi a sinistra
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-            120deg,
-            rgba(255, 255, 255, 0) 0%, // Trasparente all'inizio
-            rgba(255, 255, 255, 0.3) 50%, // Luminoso al centro
-            rgba(255, 255, 255, 0) 100% // Trasparente alla fine
-        );
-        transform: skewX(-30deg); // Inclinazione dell'effetto riflesso
-        animation: shine 4s infinite; // Animazione ciclica infinita
-    }
+.custom-card:hover {
+  border: 0px; /* Rimuove il bordo */
+  background: linear-gradient(45deg, #5653FF, #A2A89F, #F0FF3E); /* Gradiente sui tre colori */
+  background-size: 200% 200%; /* Per creare un effetto più dinamico */
+  animation: gradient-animation 4s ease infinite; /* Animazione del gradiente */
+  transform: scale(1.05); /* Ingrandisce leggermente la card (5% più grande) */
 }
 
-@keyframes shine {
-    0% {
-        left: -150%; // Inizia fuori dal bordo sinistro
-    }
-    50% {
-        left: 50%; // Attraversa la card
-    }
-    100% {
-        left: 150%; // Esce dal bordo destro
-    }
+.custom-card:hover span {
+  color: #FFFFFF; /* Colore del testo al passaggio del mouse */
+  font-weight: bold; /* Grassetto al passaggio del mouse */
 }
 
-.skills-grid {
-    display: grid; 
-    grid-template-columns: repeat(2, 1fr); // Due colonne
-    gap: 20px; // Spaziatura tra le skill
-    margin-top: 20px;
-
-    .skill-card {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px;
-        border-radius: 10px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-
-        .skill-name {
-            font-size: 1rem;
-            font-weight: bold;
-            margin-bottom: 8px;
-            color: white;
-        }
-
-        .progress-bar {
-            width: 100%;
-            height: 8px;
-            background-color: rgba(255, 255, 255, 0.2); // Sfondo barra
-            border-radius: 5px;
-            overflow: hidden;
-
-            .progress-fill {
-                height: 100%;
-                background-color: #ffffff; // Colore della barra avanzata
-                border-radius: 5px 0 0 5px;
-                transition: width 0.5s ease-in-out;
-            }
-        }
-    }
+/* Animazione del gradiente */
+@keyframes gradient-animation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
+
+
 </style>
 

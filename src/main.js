@@ -10,10 +10,13 @@ import App from './App.vue';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
-import { faCode, faPaintBrush, faRocket, faHandshake } from '@fortawesome/free-solid-svg-icons';
+import { faCode, faPaintBrush, faRocket, faHandshake, faBars } from '@fortawesome/free-solid-svg-icons';
 
 // Aggiunta delle icone alla libreria
-library.add(faCode, faPaintBrush, faRocket, faHandshake);
+library.add(faCode, faPaintBrush, faRocket, faHandshake, faBars);
+
+// Importazione del CSS di FontAwesome
+import '@fortawesome/fontawesome-svg-core/styles.css';
 
 // Creazione e montaggio dell'applicazione Vue
 const app = createApp(App);
@@ -26,5 +29,6 @@ app.use(router);
 
 // Montaggio dell'applicazione
 app.mount('#app');
+
 
 

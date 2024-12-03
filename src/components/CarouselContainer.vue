@@ -16,6 +16,8 @@ export default {
                 '/languages/bootstrap.svg',
                 '/languages/vue.svg',
                 '/languages/react.svg',
+                '/languages/figma.svg',
+                '/languages/webflow.svg',
             ],
         };
     },
@@ -26,8 +28,7 @@ export default {
 </script>
 
 <template>
-    <CarouselComponent :images="images" class="border-top border-bottom border-white py-3"/>
+    <CarouselComponent :images="images" class=" py-4 mt-5"/>
 </template>
-
 <style lang="scss" scoped>
 </style>

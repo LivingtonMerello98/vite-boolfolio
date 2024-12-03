@@ -1,8 +1,4 @@
 <script>
-
-import AppHeader from '../components/AppHeader.vue'
-
-
 //importiamo axios e store
 // import { store } from '../store';
 import axios from 'axios';
@@ -11,7 +7,6 @@ export default {
     name: 'Project-detail',
 
     components: {
-        AppHeader
     },
 
     data() {
@@ -33,7 +28,6 @@ export default {
 </script>
 
 <template>
-    <AppHeader />
     <div class="container">
         <div class="row">
             <div class="col-md-12">

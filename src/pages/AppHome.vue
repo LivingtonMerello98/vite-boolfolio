@@ -34,8 +34,8 @@ export default {
 <template>
     <AppHero />
     <AppAbout />
-    <AppDevices/>
     <AppService />
+    <AppDevices/>
 </template>
 
 <style></style>
