@@ -26,8 +26,10 @@ export default {
             <div class="col-md-8 d-flex align-items-center py-3">
                 
                 <div class="col-md-12 content">
-                    <h3>Lorem ipsum dolor sit amet <br> consectetur! </h3>
-                    <p class="mb-3">lorem ipsum ipsum dolor lorem ipsum ipsum dolor lorem ipsum ipsum dolor</p>
+                    <div class="mb-5">
+                        <h3 class="mb-3">Lorem ipsum dolor sit amet <br> consectetur! </h3>
+                        <p>lorem ipsum ipsum dolor lorem ipsum ipsum dolor lorem ipsum ipsum dolor</p>
+                    </div>
 
                     <!--card-->
                     <div class="col-md-12 py-1 my-3 custom-card d-flex justify-content-center align-items-center px-3" v-for="(course,index) in courses" :key="index">
@@ -44,6 +46,11 @@ export default {
 
                     </div>
 
+                    <div class="col-12 mt-5 d-flex justify-content-end">
+                        <button class="button py-1 mx-3">
+                            linkedin
+                        </button>
+                    </div>
 
                 </div>
 
@@ -93,6 +100,7 @@ export default {
   background-size: 200% 200%; /* Per creare un effetto più dinamico */
   animation: gradient-animation 4s ease infinite; /* Animazione del gradiente */
   transform: scale(1.05); /* Ingrandisce leggermente la card (5% più grande) */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .custom-card:hover span {
@@ -107,6 +115,13 @@ export default {
   100% { background-position: 0% 50%; }
 }
 
-
+.button{
+    border: 1px solid #151D4C;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    background-color: white;
+}
 </style>
 
