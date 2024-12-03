@@ -24,10 +24,10 @@ import ProjectsGallery from './ProjectsGallery.vue';
             link:'https://clarity-task-hub.netlify.app/',
           },
           {
-            name:'Quickwind',
-            image:'../graphics/nike.webp',
+            name:'Proloco ICR',
+            image:'/covers/proloco-cover.png',
             description:'Lorem Ipsum Dolor Sit Amet Consectetur. Gravida Dolor Tristique Sit Donec Tempor Ac Nunc Fermentum Lectus.',
-            link:'',
+            link:'https://prolocoisolacaporizzuto.it/',
           },
           {
             name:'Website 4',
