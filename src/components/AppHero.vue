@@ -57,7 +57,7 @@ export default {
 <style lang="scss" scoped>
 
 section {
-  background-image: url('../graphics/hero-background-dsk.png');
+  background-image: url('../graphics/hero-background-dsk.webp');
   background-size: cover;
   border-bottom-left-radius: 1.5rem; /* Arrotonda l'angolo inferiore sinistro */
   border-bottom-right-radius: 1.5rem; /* Arrotonda l'angolo inferiore destro */

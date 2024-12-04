@@ -66,11 +66,11 @@ export default {
                         <i class="icon">⤢</i>
                     </button>
                   </div>
-                  <div class="language-box bottom-bar d-flex justify-content-center py-2">
+                  <!-- <div class="language-box bottom-bar d-flex justify-content-center py-2">
                     <img :src="language" 
                     class="language-icon mx-3"  
                     v-for="(language,index) in project.languages" :key="index" >
-                  </div>
+                  </div> -->
               </a>
 
           </div>

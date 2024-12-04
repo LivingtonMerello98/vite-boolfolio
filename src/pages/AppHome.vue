@@ -5,6 +5,7 @@ import AppCard from '../components/AppCard.vue';
 import AppAbout from '../components/AppAbout.vue';
 import AppService from '../components/AppService.vue';
 import AppDevices from '../components/AppDevices.vue';
+import AppForm from '../components/AppForm.vue';
 
 //importiamo axios e store
 // import { store } from '../store';
@@ -17,7 +18,8 @@ export default {
         AppCard,
         AppAbout,
         AppService,
-        AppDevices
+        AppDevices,
+        AppForm
     },
 
     data() {
@@ -36,6 +38,7 @@ export default {
     <AppAbout />
     <AppService />
     <AppDevices/>
+    <AppForm/>
 </template>
 
 <style></style>
