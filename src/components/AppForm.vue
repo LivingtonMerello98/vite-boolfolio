@@ -214,10 +214,6 @@ section{
     font-weight: 700;
 }
 
-.btn-send:hover {
-  background-color: #007bff;
-  color: white;
-}
 
 
 .text-danger{
