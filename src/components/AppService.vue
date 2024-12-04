@@ -84,7 +84,7 @@ import ProjectsGallery from './ProjectsGallery.vue';
 </script>
 
 <template>
-  <section class="bg-image">
+  <section class="bg-image mb-5">
     <div class="container py-5">
       <div class="row">
         <!-- Titolo -->
@@ -95,14 +95,22 @@ import ProjectsGallery from './ProjectsGallery.vue';
           <p class="text-white">
             The projects I showcase reflect a continuous learning journey,<br> experimenting with new technologies and integrating APIs to <br>enhance the solutions provided.
           </p>
-
-          <!-- <img src="/languages/html.svg" alt="" style="width: 300px; height: 300px;"> -->
         </div>
       </div>
     </div>
 
     <!-- Progetti -->
     <ProjectsGallery :projects="projects" />
+
+    <div class="container">
+        <div class="col-12 text-end py-3">
+          <a href="">
+            <button class="">
+                github
+            </button>
+          </a>
+        </div>
+    </div>
 
   </section>
 </template>

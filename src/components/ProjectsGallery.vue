@@ -66,7 +66,7 @@ export default {
                         <i class="icon">⤢</i>
                     </button>
                   </div>
-                  <div class="bottom-bar d-flex justify-content-center py-3">
+                  <div class="language-box bottom-bar d-flex justify-content-center py-2">
                     <img :src="language" 
                     class="language-icon mx-3"  
                     v-for="(language,index) in project.languages" :key="index" >
@@ -88,6 +88,7 @@ export default {
     border-radius: 0.2rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 
 /* Card */
 .card-container {
@@ -125,16 +126,18 @@ export default {
 }
 
 .language-icon{
-  width: 30px; 
-  height: 30px; 
-  filter: invert(14%) sepia(21%) saturate(1500%) hue-rotate(220deg) brightness(91%) contrast(89%);
+  width: 20px; 
+  height: 20px; 
+  // filter: invert(14%) sepia(21%) saturate(1500%) hue-rotate(220deg) brightness(91%) contrast(89%);
 }
 
 .bottom-bar {
+  background-color: #1B245E;
+  width: fit-content;
+  border-radius: 0.2rem;
+  // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   position: absolute;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
+  bottom: 10px;
   z-index: 3; /* Sopra l'immagine */
 }
 
