@@ -1,6 +1,22 @@
 import axios from 'axios';
 import { reactive } from 'vue';
 
+export const store = reactive({
+
+    showMenu: false,
+
+    toggleMenu() {
+        this.showMenu = !this.showMenu
+    }
+
+})
+
+
+
+
+
+
+
 /*
 export const store = reactive({
     current_page: 1,

@@ -1,5 +1,6 @@
 <script>
 import { ref, onMounted, onUnmounted } from 'vue';
+import { store } from '../store';
 
 export default {
   name: 'AppHeader',
@@ -19,8 +20,15 @@ export default {
 
     return {
       currentTime,
+
     };
   },
+
+  methods:{
+    toggleMenu(){
+        store.toggleMenu()
+    }
+  }
 };
 </script>
 
@@ -32,40 +40,40 @@ export default {
             <!-- Colonna  -->
             <div class="col-lg-12 row flex-wrap">
 
-            <!-- item 1 -->
-            <div class="col-6 d-none d-sm-flex align-items-center">
-                <!-- Navigazione -->
-                <ul class="nav box py-2 px-4">
-                <li><a href="/" class="link px-2">Certificates</a></li>
-                <li><a href="/about" class="link px-2">Projects</a></li>
-                <li><a href="/contacts" class="link px-2">Get In Touch</a></li>
-                </ul>
-                <!-- Ora -->
-                <div class="time-box ms-3">
-                <p class="mb-0">{{ currentTime }}</p>
+                <!-- item 1 -->
+                <div class="col-6 d-none d-sm-flex align-items-center">
+                    <!-- Navigazione -->
+                    <ul class="nav box py-2 px-4">
+                        <li><a href="/" class="link px-2">Certificates</a></li>
+                        <li><a href="/about" class="link px-2">Projects</a></li>
+                        <li><a href="/contacts" class="link px-2">Get In Touch</a></li>
+                    </ul>
+                    <!-- Ora -->
+                    <div class="time-box ms-3">
+                    <p class="mb-0">{{ currentTime }}</p>
+                    </div>
                 </div>
-            </div>
 
-            <!-- item 2 -->
-            <div class="col-6 d-flex justify-content-end">
-                <!-- Icone Social visibili solo su dispositivi medi e grandi -->
-                <div class="d-none d-sm-flex align-items-center">
-                <a href="https://www.linkedin.com/in/livington-merello-765b1a215/" target="_blank">
-                    <img src="/socials/linkedin.svg" class="social-icon" alt="linkedin">
-                </a>
-                <a href="https://github.com/LivingtonMerello98" target="_blank">
-                    <img src="/socials/github.svg" class="social-icon" alt="github">
-                </a>
-                <a href="https://www.behance.net/merellodesigns" target="_blank">
-                    <img src="/socials/behance.svg" class="social-icon" alt="github">
-                </a>
+                <!-- item 2 -->
+                <div class="col-6 d-flex justify-content-end">
+                    <!-- Icone Social visibili solo su dispositivi medi e grandi -->
+                    <div class="d-none d-sm-flex align-items-center">
+                    <a href="https://www.linkedin.com/in/livington-merello-765b1a215/" target="_blank">
+                        <img src="/socials/linkedin.svg" class="social-icon" alt="linkedin">
+                    </a>
+                    <a href="https://github.com/LivingtonMerello98" target="_blank">
+                        <img src="/socials/github.svg" class="social-icon" alt="github">
+                    </a>
+                    <a href="https://www.behance.net/merellodesigns" target="_blank">
+                        <img src="/socials/behance.svg" class="social-icon" alt="github">
+                    </a>
+                    </div>
                 </div>
-            </div>
 
             </div>
 
             <!-- Tasto Menu visibile solo su dispositivi piccoli -->
-            <div class="col-12 d-sm-none d-flex justify-content-end">
+            <div class="col-12 d-sm-none d-flex justify-content-end" @click="toggleMenu()">
                 <font-awesome-icon :icon="['fas', 'bars']" style="color: white;" />
             </div>
         </div>
@@ -110,4 +118,7 @@ export default {
 p {
     margin: 0; /* Evita spaziature extra */
 }
+
+
+
 </style>

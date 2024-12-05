@@ -6,9 +6,11 @@ import AppAbout from '../components/AppAbout.vue';
 import AppService from '../components/AppService.vue';
 import AppDevices from '../components/AppDevices.vue';
 import AppForm from '../components/AppForm.vue';
+import AppSidebar from '../components/AppSidebar.vue';
+
 
 //importiamo axios e store
-// import { store } from '../store';
+import { store } from '../store';
 
 export default {
     name: 'home',
@@ -19,7 +21,8 @@ export default {
         AppAbout,
         AppService,
         AppDevices,
-        AppForm
+        AppForm,
+        AppSidebar
     },
 
     data() {
@@ -28,12 +31,23 @@ export default {
         }
     },
 
-    created() {
+    computed: {
+        showMenu() {
+            // Accedi alla proprietà `showMenu` dal tuo store
+            return store.showMenu;
+        }
+    },
+
+    mounted(){
+        console.log(store.showMenu)
     }
 }
 </script>
 
 <template>
+    <div v-if="showMenu"> 
+        <AppSidebar/> 
+    </div>
     <AppHero />
     <AppAbout />
     <AppService />
