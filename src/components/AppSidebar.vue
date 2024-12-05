@@ -4,7 +4,8 @@ import { store } from '../store';
 export default{
     data(){
         return{
-            name: 'AppSiderbar'
+            name: 'AppSiderbar',
+            anchors: store.anchors
         }
     },
     methods:{
@@ -19,15 +20,13 @@ export default{
     <div class="sidebar d-flex
     flex-column">
         <div>
-            <button class="btn text-white" @click="toggleMenu()">X</button>
+            <font-awesome-icon @click="toggleMenu()" :icon="['fas', 'close']" style="color: white;" class="px-3 py-3" />
         </div>
         
         <div class="col-md-12 px-3">
 
             <ul class="py-3">
-                <li class="mb-3"><a href="/" >Certificates</a></li>
-                <li class="mb-3"><a href="/about" >Projects</a></li>
-                <li class="mb-3"><a href="/contacts" >Get In Touch</a></li>
+                <li class="mb-3" v-for="(anchor, index) in anchors" :key="index"><a :href="anchor.link" >{{ anchor.name }}</a></li>
             </ul>
 
             <hr class="text-white">

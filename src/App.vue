@@ -8,6 +8,7 @@ export default {
       overflowHidden: 'hidden',
     };
   },
+  name:'AppVue',
   components: {
     AppFooter
   },

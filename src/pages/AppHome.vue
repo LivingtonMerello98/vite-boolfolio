@@ -1,4 +1,6 @@
 <script>
+//importiamo axios e store
+import { store } from '../store';
 
 import AppHero from '../components/AppHero.vue';
 import AppCard from '../components/AppCard.vue';
@@ -8,12 +10,8 @@ import AppDevices from '../components/AppDevices.vue';
 import AppForm from '../components/AppForm.vue';
 import AppSidebar from '../components/AppSidebar.vue';
 
-
-//importiamo axios e store
-import { store } from '../store';
-
 export default {
-    name: 'home',
+    name: 'AppHome',
 
     components: {
         AppHero,
@@ -49,9 +47,18 @@ export default {
         <AppSidebar/> 
     </div>
     <AppHero />
+
+    <!-- certificates -->
     <AppAbout />
+
+
+    <!--projects-->
     <AppService />
+
+
     <AppDevices/>
+
+    <!-- get in touch -->
     <AppForm/>
 </template>
 

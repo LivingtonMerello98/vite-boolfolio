@@ -4,6 +4,11 @@ import { store } from '../store';
 
 export default {
   name: 'AppHeader',
+  data(){
+    return{
+        anchors: store.anchors
+    }
+  },
   setup() {
     const currentTime = ref(new Date().toLocaleTimeString());
 
@@ -44,9 +49,7 @@ export default {
                 <div class="col-6 d-none d-sm-flex align-items-center">
                     <!-- Navigazione -->
                     <ul class="nav box py-2 px-4">
-                        <li><a href="/" class="link px-2">Certificates</a></li>
-                        <li><a href="/about" class="link px-2">Projects</a></li>
-                        <li><a href="/contacts" class="link px-2">Get In Touch</a></li>
+                        <li><a href="/" class="link px-2" v-for="(anchor, index) in anchors" :key="index">{{ anchor.name }}</a></li>
                     </ul>
                     <!-- Ora -->
                     <div class="time-box ms-3">
@@ -73,8 +76,8 @@ export default {
             </div>
 
             <!-- Tasto Menu visibile solo su dispositivi piccoli -->
-            <div class="col-12 d-sm-none d-flex justify-content-end" @click="toggleMenu()">
-                <font-awesome-icon :icon="['fas', 'bars']" style="color: white;" />
+            <div class="col-12 d-sm-none d-flex justify-content-end">
+                <font-awesome-icon @click="toggleMenu()" :icon="['fas', 'bars']" style="color: white;" class="px-3" />
             </div>
         </div>
         </div>
