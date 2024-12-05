@@ -19,7 +19,7 @@ export default {
         // Ritarda l'attivazione per assicurarsi che la pagina sia pronta
         setTimeout(() => {
             this.isLoaded = true;
-        }, 300); // Ritardo di 300ms
+        }, 600); // Ritardo di 300ms
     },
 };
 </script>

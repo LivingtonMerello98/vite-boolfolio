@@ -1,16 +1,19 @@
 <script>
 import { store } from './store';
 import AppFooter from './components/AppFooter.vue';
+import AppSplashPage from './components/AppSplashPage.vue'
 
 export default {
   data() {
     return {
       overflowHidden: 'hidden',
+      flag: true,
     };
   },
   name:'AppVue',
   components: {
-    AppFooter
+    AppFooter,
+    AppSplashPage
   },
   computed: {
     showMenu() {
@@ -28,6 +31,11 @@ export default {
         document.body.style.overflow = '';
       }
     }
+  },
+  mounted(){
+    setTimeout(()=>{
+      this.flag = false;
+    },1000) //1 secondo
   }
 };
 </script>
@@ -35,8 +43,18 @@ export default {
 
 <template>
   <section>
+    <div v-if="flag" class="overflowHidden">
+      <AppSplashPage/>
+    </div>
     <router-view></router-view>
     <AppFooter />
   </section>
 </template>
+
+<style lang="scss" scoped>
+.overflowHidden{
+  overflow-y: hidden;
+}
+
+</style>
 
