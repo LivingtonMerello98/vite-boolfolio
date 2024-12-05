@@ -49,7 +49,7 @@ export default {
                 <div class="col-6 d-none d-sm-flex align-items-center">
                     <!-- Navigazione -->
                     <ul class="nav box py-2 px-4">
-                        <li><a href="/" class="link px-2" v-for="(anchor, index) in anchors" :key="index">{{ anchor.name }}</a></li>
+                        <li><a :href="anchor.link" class="link px-2" v-for="(anchor, index) in anchors" :key="index">{{ anchor.name }}</a></li>
                     </ul>
                     <!-- Ora -->
                     <div class="time-box ms-3">

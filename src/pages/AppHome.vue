@@ -48,18 +48,23 @@ export default {
     </div>
     <AppHero />
 
-    <!-- certificates -->
-    <AppAbout />
+    <section id="certificates">
+        <AppAbout />
+    </section>
 
 
-    <!--projects-->
-    <AppService />
+    <section id="projects">
+        <AppService />
+    </section>
 
 
     <AppDevices/>
 
     <!-- get in touch -->
-    <AppForm/>
+    <section id="contact">
+        <AppForm />
+    </section>
+
 </template>
 
 <style></style>

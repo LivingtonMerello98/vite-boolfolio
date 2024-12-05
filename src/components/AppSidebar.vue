@@ -26,7 +26,11 @@ export default{
         <div class="col-md-12 px-3">
 
             <ul class="py-3">
-                <li class="mb-3" v-for="(anchor, index) in anchors" :key="index"><a :href="anchor.link" >{{ anchor.name }}</a></li>
+                <li v-for="(anchor, index) in anchors" :key="index" class="mb-3" @click="toggleMenu()">
+                    <a :href="anchor.link" class="link px-2" style="display: inline-block;">
+                        {{ anchor.name }}
+                    </a>
+                </li>
             </ul>
 
             <hr class="text-white">

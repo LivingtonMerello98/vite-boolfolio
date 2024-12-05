@@ -11,18 +11,19 @@ export const store = reactive({
     },
 
     // links
+    // Links relativi alle ancore
     anchors: [
         {
             name: 'Certificates',
-            link: '/'
+            link: '#certificates',  // Link per scrollare verso la sezione certificati
         },
         {
             name: 'Projects',
-            link: '/'
+            link: '#projects',  // Link per scrollare verso la sezione progetti
         },
         {
             name: 'Get In Touch',
-            link: '/'
+            link: '#contact',  // Link per scrollare verso la sezione contatti
         },
     ]
 
