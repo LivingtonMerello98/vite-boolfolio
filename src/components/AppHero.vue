@@ -35,7 +35,7 @@ export default {
                             Hi! my name is Livington
                         </h3>
                         <h1 class="text-white text-uppercase">
-                            Jr.Fullstack Developer and UX/UI Designer
+                            Jr.Fullstack Developer and Web Designer
                         </h1>
                     </div>
                 </div>
