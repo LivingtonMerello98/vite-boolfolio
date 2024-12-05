@@ -1,25 +1,41 @@
 <script>
-// import { store } from './store';
-import axios from 'axios';
-
+import { store } from './store';
 import AppFooter from './components/AppFooter.vue';
 
 export default {
-
+  data() {
+    return {
+      overflowHidden: 'hidden',
+    };
+  },
   components: {
     AppFooter
   },
-
-}
-
+  computed: {
+    showMenu() {
+      // Accedi alla proprietà `showMenu` dal tuo store
+      return store.showMenu;
+    }
+  },
+  watch: {
+    showMenu(newValue) {
+      if (newValue) {
+        // Blocca lo scroll verticale
+        document.body.style.overflow = 'hidden';
+      } else {
+        // Ripristina lo scroll
+        document.body.style.overflow = '';
+      }
+    }
+  }
+};
 </script>
+
 
 <template>
   <section>
-    <!-- <AppHeader /> -->
     <router-view></router-view>
     <AppFooter />
   </section>
 </template>
 
-<style scoped lang="scss"></style>
