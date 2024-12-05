@@ -1,27 +1,18 @@
 <script>
 export default {
-    name: 'AppAbout',
-    data() {
-        return {
-            courses: [
-                { 
-                name: 'Boolean', 
-                year: '2024', 
-                certificate:'Fullstack Development'
-                },
-                { 
-                name: 'Learn', 
-                year: '2023', 
-                certificate: 'UX Design' 
-                },
-                { 
-                name: 'Learn', 
-                year: '2023', 
-                certificate: 'Webflow/Web-Design' 
-                },
-            ],
-        };
-    },
+  name: 'AppAbout',
+  data() {
+    return {
+      courses: [
+        { name: 'Udemy', year: 'Ongoing...', certificate: 'MERN Stack' },
+        { name: 'Boolean', year: '2024', certificate: 'Fullstack Development' },
+        { name: 'Learn', year: '2023', certificate: 'UX Design' },
+        { name: 'Learn', year: '2023', certificate: 'Webflow/Web-Design' },
+      ],
+      hoverIndex: null, // Stato per il card attualmente in hover
+      cardColors: ['#FF5733', '#33FF57', '#5733FF', '#F3FF33'], // Colori corrispondenti alle card
+    };
+  },
 };
 </script>
 
@@ -31,6 +22,7 @@ export default {
             <!-- Immagine a sinistra -->
             <div class="col-md-4 py-5 d-flex align-items-center justify-content-end">
                 <div class="img-container">
+                    <!-- img da sostituire con i div colorati diversamente quando si va in hover sulle card -->
                     <img src="../graphics/rocket.webp" alt="robot-developer" class="rocket" />
                 </div>
             </div>
@@ -59,7 +51,7 @@ export default {
                     </div>
 
                     <div class="col-12 mt-5 d-flex justify-content-end">
-                        <button class="button py-2 mx-3">
+                        <button class="button py-2 px-4">
                             linkedin
                         </button>
                     </div>
@@ -133,11 +125,15 @@ export default {
     border-top-right-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
+    color: #151D4C;
     background-color: white;
+    transition: 0.4s ;
 }
 // forse da rimuovere
 .button:hover{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 1px solid #151d4c00 ;
+    background-color: #151D4C;
+    color: white;
 }
 </style>
 

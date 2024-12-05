@@ -100,13 +100,13 @@ export default {
     <section class="bg-image py-5">
       <div class="container py-5">
         <div class="row justify-content-center">
-          <div class="col-md-8 text-center mb-4">
-            <h3 class="text-white">Form</h3>
-            <p class="text-white">Fill out the form and send your request.</p>
-          </div>
+            <div class="col-md-8 text-center py-5">
+                <h3 class="text-white mb-4">Get in Touch</h3>
+                <p class="text-white">I'm open to exciting projects, collaborations, or job opportunities. Feel free to reach out!</p>
+            </div>
           <!-- Feedback Messages -->
           <div v-if="successMessage" class="text-center mb-4">
-            <span style="font-size: 14px; color: green;">{{ successMessage }}</span>
+            <span style="font-size: 14px; color: rgba(39, 209, 20, 0.867);">{{ successMessage }}</span>
           </div>
           <div v-if="errorMessage" class="text-center mb-4">
             <span style="font-size: 14px; color: red;">{{ errorMessage }}</span>
@@ -148,7 +148,7 @@ export default {
             />
             <small v-if="errors.telefono" class="text-danger">{{ errors.telefono }}</small>
           </div>
-          <div class="col-md-12 mb-3">
+          <div class="col-md-12 mb-5">
             <textarea
               v-model="nota"
               class="form-control form-input"
@@ -211,10 +211,12 @@ section{
     background-color:white;
     color: #151D4C;
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 600;
 }
 
-
+.btn-send:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
 .text-danger{
     color: red;

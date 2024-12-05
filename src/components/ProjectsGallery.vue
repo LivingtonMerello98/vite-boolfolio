@@ -66,11 +66,11 @@ export default {
                         <i class="icon">⤢</i>
                     </button>
                   </div>
-                  <!-- <div class="language-box bottom-bar d-flex justify-content-center py-2">
+                  <div class="language-box bottom-bar d-flex justify-content-center py-2">
                     <img :src="language" 
                     class="language-icon mx-3"  
                     v-for="(language,index) in project.languages" :key="index" >
-                  </div> -->
+                  </div> 
               </a>
 
           </div>
@@ -100,7 +100,9 @@ export default {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   color: #ffffff;
   background-color: rgba(20, 33, 61, 0.9); /* Sfondo leggermente trasparente */
+  transition: all 0.3s ease-in-out; /* Transizione fluida */
 }
+
 /* Aggiungi l'immagine di sfondo */
 .background-image {
   position: absolute;
@@ -128,16 +130,14 @@ export default {
 .language-icon{
   width: 20px; 
   height: 20px; 
-  // filter: invert(14%) sepia(21%) saturate(1500%) hue-rotate(220deg) brightness(91%) contrast(89%);
+  filter: invert(14%) sepia(21%) saturate(1500%) hue-rotate(220deg) brightness(91%) contrast(89%);
 }
 
 .bottom-bar {
-  background-color: #1B245E;
   width: fit-content;
-  border-radius: 0.2rem;
-  // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   position: absolute;
   bottom: 10px;
+  left: 30px;
   z-index: 3; /* Sopra l'immagine */
 }
 

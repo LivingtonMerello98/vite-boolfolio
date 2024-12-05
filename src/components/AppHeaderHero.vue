@@ -36,9 +36,9 @@ export default {
             <div class="col-6 d-none d-sm-flex align-items-center">
                 <!-- Navigazione -->
                 <ul class="nav box py-2 px-4">
-                <li><a href="/" class="link px-2">Home</a></li>
-                <li><a href="/about" class="link px-2">About</a></li>
-                <li><a href="/contacts" class="link px-2">Contact</a></li>
+                <li><a href="/" class="link px-2">Certificates</a></li>
+                <li><a href="/about" class="link px-2">Projects</a></li>
+                <li><a href="/contacts" class="link px-2">Get In Touch</a></li>
                 </ul>
                 <!-- Ora -->
                 <div class="time-box ms-3">

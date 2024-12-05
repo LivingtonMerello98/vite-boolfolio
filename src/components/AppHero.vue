@@ -41,9 +41,9 @@ export default {
                 </div>
                 <div class="col-lg-6 col-md-12 py-5 d-flex justify-content-center" :class="{ 'fade-in': isLoaded }">
                     <div class="img-container">
-                    <img src="../graphics/astronaut.webp" alt="robot-developer" class="robot" />
-                    <img src="../graphics/planet.webp" alt="planet" class="planet" />
-                </div>
+                        <img src="../graphics/astronaut.webp" alt="robot-developer" class="robot" />
+                        <img src="../graphics/planet.webp" alt="planet" class="planet" />
+                    </div>
                 </div>
             </div>
         </div>
