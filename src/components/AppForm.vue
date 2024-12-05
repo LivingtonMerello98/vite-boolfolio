@@ -100,10 +100,11 @@ export default {
     <section class="bg-image py-5">
       <div class="container py-5">
         <div class="row justify-content-center">
-            <div class="col-md-8 text-center py-5">
-                <h3 class="text-white mb-4">Get in Touch</h3>
-                <p class="text-white">I'm open to exciting projects, collaborations, or job opportunities. Feel free to reach out!</p>
-            </div>
+          <div class="col-md-8 text-center py-5">
+              <h3 class="text-white mb-4">Get in Touch</h3>
+              <p class="text-white">I'm open to projects, collaborations, and opportunities. Feel free to reach out!</p>
+          </div>
+
           <!-- Feedback Messages -->
           <div v-if="successMessage" class="text-center mb-4">
             <span style="font-size: 14px; color: rgba(39, 209, 20, 0.867);">{{ successMessage }}</span>
@@ -203,6 +204,7 @@ section{
 }
 
 .btn-send {
+    width: 40%;
     border: 1px solid #ffffff;
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
@@ -215,7 +217,15 @@ section{
 }
 
 .btn-send:hover{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 1px solid #ffffff;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    background-color: rgba(255, 255, 255, 0);
+    font-size: 14px;
+    color: #ffffff;
+    transition: all 0.3s ease; /* Animazione fluida per l'hover */
 }
 
 .text-danger{
